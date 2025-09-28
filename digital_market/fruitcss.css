@@ -1,0 +1,62 @@
+main {
+  display: flex;
+  background-color: #eaeaea;
+}
+
+
+.nav-bar {
+  background-color: #eaeaea;
+}
+
+.marge {
+  margin-left: 6%;
+}
+
+/* Conteneur cartes pour avoir une hauteur fixe */
+.card {
+  width: 100%; /* prend toute la largeur du parent col */
+  max-width: 350px; /* limite max pour desktop */
+  height: 400px; /* hauteur fixe pour uniformiser */
+  overflow: visible; /* pour laisser dépasser zoom */
+  position: relative;
+  margin: auto; /* centre horizontalement dans col */
+}
+
+/* Fixe la taille de l'image, objet fit cover pour éviter déformation */
+.card-img-top {
+  width: 100%;
+  height: 300px; /* fixe la hauteur de l'image */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  object-position: center;
+  z-index: 10;
+  
+}
+
+/* Zoom avec dépassement */
+.card-img-top.zoom-hover:hover {
+  transform: scale(1.1);
+  z-index: 20;
+}
+
+/* Centrer bouton */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px; /* complète hauteur pour que total = 400px */
+}
+
+/* Responsive : réduire la hauteur max et taille image sur petits écrans */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+    height: auto;
+  }
+  .card-img-top {
+    height: 200px;
+  }
+  .card-body {
+    height: auto;
+  }
+}

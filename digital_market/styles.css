@@ -1,0 +1,119 @@
+.nav-bar {
+  background-color: #EAEAEA;
+}
+
+main {
+  background-color: #EAEAEA;
+}
+
+video {
+  margin-bottom: 40px;
+}
+
+.custom-text-border {
+  border: 2px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #f8fff9;
+  max-width: 30%;
+  padding: 15px;
+  display: inline-block;
+}
+
+.feature-icon img {
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.feature-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  justify-content: flex-start;
+}
+
+.zoom-hover {
+  transition: transform 0.3s ease;
+}
+
+.zoom-hover:hover {
+  transform: scale(1.1);
+}
+
+/* Taille réduite pour les images des fruits et légumes */
+.slide-img {
+  max-height: 100%;  /* limite la hauteur max */
+  max-width: 300px;   /* limite la largeur max */
+  width: 100%;        /* largeur adaptative */
+  object-fit: contain; /* pour garder la proportion */
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.farmer-img {
+  width: 20%;
+  margin-left: 25%;
+  margin-bottom: 40px;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .custom-text-border {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .farmer-img {
+    width: 40%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+    .slide-img {
+    max-height: 100%;
+    max-width: 100%px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-icon img {
+    height: 120px;
+  }
+
+  .slide-img {
+    max-height: 100%;
+    max-width: 200px;
+  }
+
+  .feature-icon {
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .slide-img {
+    max-height: 100%;
+    max-width: 150px;
+  }
+  .carousel-item .col-sm-4 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .feature-icon {
+    height: auto;
+  }
+
+  .feature-icon img {
+    height: 100px;
+  }
+
+  .farmer-img {
+    width: 50%;
+    margin-left: 0;
+  }
+}
