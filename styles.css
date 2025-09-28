@@ -42,12 +42,11 @@ video {
   transform: scale(1.1);
 }
 
-/* Taille réduite pour les images des fruits et légumes */
 .slide-img {
-  max-height: 100%;  /* limite la hauteur max */
-  max-width: 300px;   /* limite la largeur max */
-  width: 100%;        /* largeur adaptative */
-  object-fit: contain; /* pour garder la proportion */
+  max-height: 100%; 
+  max-width: 300px;   
+  width: 100%;       
+  object-fit: contain; 
   border-radius: 8px;
   margin-left: auto;
   margin-right: auto;
